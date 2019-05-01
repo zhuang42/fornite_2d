@@ -1,18 +1,18 @@
-#CSC309 A3
+# CSC309 A3
 Mutiplayer 2D Fortnite
 
-##Introduction
-###Front end
+## Introduction
+### Front end
 UI: ReactMaterial  
 Game Model: canvas and pure JS websocket
 
-###Back end
+### Back end
 Nodejs support: 
 Restful api for user management
 Websocket for mutiplayer game
 
 
-##Setup and Run
+## Setup and Run
 
 ```bash
 ./setup.bash PORT_NUM
