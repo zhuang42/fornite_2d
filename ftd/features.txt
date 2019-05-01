@@ -1,0 +1,83 @@
+HOW TO PLAY THE GAME
+
+MOVE ->AWSD
+
+RELOAD->R
+
+PICKUP->F
+
+fire! -> HOLD Left-mouse
+
+Play until you die!
+
+1. WebSockets
+
+WebSocket creates when the page load successfully. It only supports two ways communications.
+
+SERVER ---> CLIENT
+
+Server starts to send message only if client successfully login to a valid account.
+It only sends necessary actor information (position and shape, color etc) to let client draw out the
+actors. Client will validate the message, discard it if the message is not well formatted.
+
+CLIENT ---> SERVER
+
+client only sends to server to perform necessary operations, such as "login", "logout", "start", "event".
+
+login tells the server the id of current socket.
+logout tells the server the id of current socket stop using.
+start tells the server to create a player for current id.
+event tells the server concrete event made by user (mousemove, touch etc.)
+
+
+The game model is separated to client version and server version (model.js and modelServer.js).
+
+client model only draws the actors, where server model only steps the model.
+
+IT SUPPORTS RECONNECT TO THE GAME, and Two gamers are able to play one character if they login one account.
+
+
+2. React
+
+The app made by npm CREATE-APP-REACT, where node only server "build" version.
+
+Remade UI by React + Material UI, new error message, new html form validation.
+
+The whole web page consists of 1 div and 1 canvas. (Since canvas is not easy to reference in React
+
+The canvas only shows in game page.
+)
+
+Each main page is a react component (Signin, Signup etc), it also reused error bar abd gender radio buttons component.
+
+The model class (model.js) and socket class (socket.js) is imported in App.js under ./src folder. They are created inside
+
+APP component.
+
+
+
+3. Mobile Features
+
+The game is fully supported by mobile phone or tablet. Please lock the orientation to play the game on mobile devices.
+
+The canvas size is auto resizeable to screen size.
+
+MOVE-> Tilt phone. (accelerationIncludingGravity)
+
+CHANGE DIRECTION -> TOUCH MOVE (touch start and touch move event)
+
+FIRE -> TOUCH!
+
+PICKUP -> Two finger touch (touch start event)
+
+RELOAD -> Double tap
+
+START GAME -> SHAKE YOUR PHONE
+
+All events implemented by vanilla event listener, no external library used.
+
+
+
+
+
+

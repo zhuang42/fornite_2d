@@ -1,0 +1,19 @@
+{
+  "name": "ftd",
+  "version": "2.0.0",
+  "description": "mutiplyer ftd",
+  "main": "ftd.js",
+  "scripts": {
+    "test": "node ftd.js"
+  },
+  "author": "csc309",
+  "license": "ISC",
+  "dependencies": {
+    "JSON": "^1.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "sqlite3": "^4.0.6",
+    "uuid": "^3.3.2",
+    "ws": "^6.2.1"
+  }
+}
